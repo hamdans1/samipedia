@@ -18,8 +18,9 @@
  gem 'coffee-rails', '~> 4.1.0'
  gem 'jquery-rails'
  gem 'turbolinks'
- gem 'bootstrap'
+ gem 'bootstrap-sass'
  gem 'figaro'
+ gem 'devise'
 
  group :development, :test do
    gem 'byebug'
@@ -29,5 +30,4 @@
    gem 'faker'
    gem 'factory_girl_rails'
    gem 'pry-rails'
-   gem 'bootstrap-sass'
  end
