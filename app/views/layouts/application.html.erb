@@ -14,7 +14,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"> <%= link_to "Home", root_path %> </li>
-      <li class="active">Index</li>
+      <li class="active"><%= link_to "Index", wikis_path %> </li>
       <li class="active"><%= link_to "Sign In", user_session_path %></li>
       <% if user_signed_in? %>
       <li class="active">Signed in as: <%= current_user.email %></li>
@@ -42,7 +42,7 @@
   </div>
   </nav>
   
-    <% if flash[:notice] %>
+  <% if flash[:notice] %>
   <div class ="alert alert-success">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
     <%= flash[:notice] %>
