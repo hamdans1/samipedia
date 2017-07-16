@@ -23,6 +23,7 @@
  gem 'devise'
  gem 'pundit'
  gem 'stripe'
+ gem 'faker'
 
  group :development, :test do
    gem 'byebug'
