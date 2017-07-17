@@ -35,6 +35,11 @@ class ChargesController < ApplicationController
         @user = User.find(params[:id])
         
         @user.update_attribute(:role, 'standard')
+        @user.wikis.each do |wiki|
+            wiki.update_attribute(:private, false)
+        end
+        
+        flash[:alert] = "You have downgraded your membership. Your private posts are now available for public viewing."
         redirect_to root_path
     end
     

@@ -42,10 +42,10 @@
 
 <% if current_user.role == 'premium' %>
 <h3>Downgrade my account</h3>
-<p><%= button_to "downgrade", edit_charge_path(@user), method: :get %></p>
+<p><%= button_to "Downgrade", edit_charge_path(@user), data: {confirm: "Downgrading will downgrade your account and cause your private posts to become public."}, method: :get %></p>
 <% else %>
 <h3>Upgrade my Account</h3>
-<p><%= button_to "upgrade", new_charge_path, method: :get %></p>
+<p><%= button_to "Upgrade", new_charge_path, method: :get %></p>
 <% end %>
 <%= link_to "Back", :back %>
 
